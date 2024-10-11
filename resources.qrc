@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/begin.ico</file>
+        <file>images/img_login_window.jpg</file>
+        <file>style/stylesheet.qss</file>
+    </qresource>
+</RCC>
