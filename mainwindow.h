@@ -28,6 +28,7 @@ public:
     ~MainWindow();
 
 public:
+    // 注册模块槽函数
     void SlotSwitchReg();
 
 private:

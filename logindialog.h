@@ -28,6 +28,7 @@ private:
     Ui::LoginDialog *ui;
 
 signals:
+    // 选择注册按钮
     void SwitchRegister();
 
 };
