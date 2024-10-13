@@ -24,7 +24,7 @@ public:
     static std::shared_ptr<T> GetInstance()
     {
         static std::once_flag s_flag;
-        std::call_once(s_flag,[&](){
+        std::call_once(s_flag, [&](){
             // make_shared会调用构造函数，而此处为私有化
             instance = std::shared_ptr<T>(new T);
         });
@@ -42,8 +42,7 @@ protected:
 protected:
     Singleton() = default;
     explicit Singleton(const Singleton<T> &) = delete;
-    Singleton& operator = (const Singleton<T>& st) = delete;
+    Singleton& operator = (const Singleton<T> &st) = delete;
 };
-
 
 #endif // SINGLETON_H

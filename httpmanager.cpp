@@ -19,6 +19,7 @@ void HttpManager::PostHttpReq(QUrl url, QJsonObject json, ReqId req_id, Modules 
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setHeader(QNetworkRequest::ContentLengthHeader, QByteArray::number(data.length()));
 
+    // 防止回调未作用共享指针就被销毁
     auto self = shared_from_this();
 
     // 回应

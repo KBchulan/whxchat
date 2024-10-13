@@ -20,13 +20,13 @@ class HttpManager final: public QObject, public Singleton<HttpManager>,
     friend class Singleton<HttpManager>;
 
 public:
-    virtual ~HttpManager();
-
-private:
-    HttpManager();
+    ~HttpManager();
 
     // 发送数据,同步和异步，收取回调
     void PostHttpReq(QUrl url, QJsonObject json, ReqId req_id, Modules mod);
+
+private:
+    HttpManager();
 
 private slots:
     // 槽函数,参数不能超过信号参数数量

@@ -24,6 +24,9 @@ private:
     // 处理请求，解析请求和包内容
     void HandleReq();
 
+    // 解析url,即取出pair对象
+    void PreParseGetParam();
+
 private:
     tcp::socket _socket;
     beast::flat_buffer _buffer{8192};
@@ -36,6 +39,8 @@ private:
         std::chrono::seconds(60)
     };
         
+    std::string _get_url;
+    std::unordered_map<std::string, std::string> _get_params;
 };
 
 #endif // HTTP_CONNECTION_H

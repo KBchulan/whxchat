@@ -20,6 +20,12 @@ public:
     // 注册get请求
     void RegGet(std::string, HttpHandler handler);
 
+    // 处理post请求
+    bool HandlePost(std::string, std::shared_ptr<HttpConnection>);
+
+    // 注册post请求
+    void RegPost(std::string, HttpHandler handler);
+
 private:
     LogicSystem();
 

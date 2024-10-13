@@ -107,7 +107,7 @@
           </size>
          </property>
          <property name="text">
-          <string>用户</string>
+          <string>用户  </string>
          </property>
         </widget>
        </item>
@@ -115,13 +115,13 @@
         <widget class="QLineEdit" name="user_edit">
          <property name="minimumSize">
           <size>
-           <width>235</width>
+           <width>220</width>
            <height>25</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>235</width>
+           <width>220</width>
            <height>25</height>
           </size>
          </property>
@@ -157,18 +157,18 @@
         <widget class="QLineEdit" name="pass_edit">
          <property name="minimumSize">
           <size>
-           <width>235</width>
+           <width>220</width>
            <height>25</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>235</width>
+           <width>220</width>
            <height>25</height>
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>

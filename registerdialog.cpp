@@ -37,6 +37,11 @@ void RegisterDialog::on_code_btn_clicked()
     bool match = regex.match(email).hasMatch();
     if(match){
         // 发送验证码
+        QJsonObject json_obj;
+        json_obj["email"] = email;
+        HttpManager::GetInstance()->PostHttpReq(QUrl("http://localhost:10000/get_varifycode"),
+                                                json_obj, ReqId::ID_GET_VARIFY_CODE, Modules::REGISTERMOD);
+
     }
     else{
         showTip(tr("邮箱地址不正确"), false);
